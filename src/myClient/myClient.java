@@ -20,6 +20,12 @@ public class myClient {
         System.out.println("Fourth game: "+game1);
         Game game5 = controller.getById(5L);
         System.out.println("Fifth game: "+game5);
+        Game game26 = controller.getById(26L);
+        System.out.println("26th game: "+game26);
+        Game game27 = controller.getById(27L);
+        System.out.println("27th game: "+game27);
+        Game game28 = controller.getById(28L);
+        System.out.println("28th game: "+game28);
     }
 
 }

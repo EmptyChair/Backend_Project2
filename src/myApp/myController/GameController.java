@@ -15,6 +15,9 @@ public class GameController {
     }
 
     public Game getById(Long id) {
-        return service.getById(id);
+        Game game = service.getById(id);
+        if (game ==null)
+            System.out.println("Game not found!");
+        return game;
     }
 }

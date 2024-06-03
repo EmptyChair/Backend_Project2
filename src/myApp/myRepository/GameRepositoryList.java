@@ -16,18 +16,17 @@ public class GameRepositoryList implements GameRepository {
         gamelist.add(new Game(2L,"Fallout 3",new BigDecimal(60), 15));
         gamelist.add(new Game(3L,"Mass Effect",new BigDecimal(40), 3));
         gamelist.add(new Game(4L,"Sherlock Adventure",new BigDecimal(25), 0));
+        gamelist.add(new Game(27L,"Baba Yaga",new BigDecimal(10), 1));
     }
 
     @Override
     public Game getById(Long id) {
-        Game foundGame;
-        try {
-            return gamelist.get(Math.toIntExact(id));
-        } catch(Exception e) {
-            System.out.println("ERROR: game not found!");
-            return null;
+        //Game foundGame;
+        for (Game foundgame : this.gamelist) {
+            if (foundgame.getId().equals(id))
+                return foundgame;
         }
+        return null;
     }
-
 
 }

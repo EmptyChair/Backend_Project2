@@ -28,8 +28,8 @@ public class GameServiceImpl implements GameService {
             setArticle(game);
             return game;
         } else {
-            return null;        }
-
+            return null;
+        }
     }
 
     private void setArticle(Game game) {
